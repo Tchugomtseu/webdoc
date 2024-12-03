@@ -1,0 +1,153 @@
+
+@font-face {
+    font-family: "Speeday-Regular-FFP";
+    src: url(../image/Fonts/Speeday-Regular-FFP.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Speeday-Bold-FFP";
+    src: url(../image/Fonts/Speeday-Bold-FFP.ttf) format("truetype");
+}
+
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Speeday-Regular-FFP";
+    background-color: black;
+}
+
+/* Background video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header styling */
+.header .navbar {
+    height: 70px; /* Augmente la hauteur du header */
+}
+
+/* Style pour le message défilant */
+.messagedefilant {
+    position: relative;
+    overflow: hidden; /* Cache le contenu hors écran */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    width: 100%; /* Largeur de la zone visible */
+    height: 50px; /* Ajuste selon la taille de ton texte */
+    background-color: black;
+}
+
+.messagedefilant .contenu {
+    display: inline-block;
+    animation: defilement 10s linear infinite; /* Durée de l'animation */
+}
+
+.messagedefilant span {
+    display: inline-block;
+    font-family: "racing sans one" !important;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px; /* Espacement entre les textes */
+}
+
+/* Animation du défilement */
+@keyframes defilement {
+    from {
+        transform: translateX(0); /* Commence à gauche */
+    }
+    to {
+        transform: translateX(-100%); /* Défile jusqu'à disparaître à gauche */
+    }
+}
+
+/* Main content for the title */
+#main-content {
+    height: calc(100vh - 150px); /* Moins la hauteur du header et un ajustement pour recentrer */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Remonte légèrement le titre */
+    padding-top: 50px;
+    text-align: center;
+    z-index: 1; /* Au-dessus de la vidéo */
+}
+
+#titre-du-webdoc {
+    font-size: 4rem; /* Agrandit légèrement la taille du texte */
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    
+}
+
+/* Button styling */
+#button-container {
+    z-index: 1; /* Au-dessus de la vidéo */
+}
+
+#en-route-btn {
+    font-size: 1.5rem;
+    padding: 12px 24px; /* Légèrement agrandi */
+    border-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+#en-route-btn:hover {
+    background-color: black;
+    color: rgba(0, 0, 0, 0.500);
+    cursor: pointer;
+    border-color: white;
+}
+
+/* Style général du pop-up */
+.popup {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "racing sans one" !important;
+  }
+  
+  /* Contenu du pop-up */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 430px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Bouton de fermeture */
+  .close {
+    color: #aaa;
+    font-size: 1px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

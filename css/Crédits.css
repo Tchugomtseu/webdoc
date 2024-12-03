@@ -1,0 +1,385 @@
+body{
+    background-color:white;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+th,td {
+    padding: 8px 10px;
+}
+
+.titre_article{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 70;
+    font-style: normal;
+    font-size: 700% !important;
+}
+
+
+/*CSS de la Galerie*/
+    /*CSS Galerie, Image*/
+    .cadre{
+        height: fit-content;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    
+    /*CSS Galerie - Bouton*/
+    #btns-glr{
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+    }
+
+    .btnGaleri{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: 2px solid black;
+        background-color: white;
+            font-family: "Racing Sans One", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 30px;
+    }
+
+    .Policelogo{
+        color: #F80302;
+        -webkit-text-stroke-width: 1,5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+
+
+
+/* Style pour le message défilant */
+.messagedefilant {
+    position: relative;
+    overflow: hidden; /* Cache le contenu hors écran */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    width: 100%; /* Largeur de la zone visible */
+    height: 50px; /* Ajuste selon la taille de ton texte */
+    background-color: black;
+}
+
+.messagedefilant .contenu {
+    display: inline-block;
+    animation: defilement 10s linear infinite; /* Durée de l'animation */
+}
+
+.messagedefilant span {
+    display: inline-block;
+    font-family: "Racing Sans One", sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px; /* Espacement entre les textes */
+}
+
+/* Animation du défilement */
+@keyframes defilement {
+    from {
+        transform: translateX(0); /* Commence à gauche */
+    }
+    to {
+        transform: translateX(-100%); /* Défile jusqu'à disparaître à gauche */
+    }
+}
+
+
+/* Styles généraux pour l'intégration de flexbox */
+html, body {
+    height: 100%; /* Prendre toute la hauteur de la fenêtre */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Prend tout l'espace disponible pour les sections entre le header et footer */
+}
+
+/* Footer fixé au bas */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    width: 100%; /* S'assure que le footer occupe toute la largeur de la page */
+    position: relative;
+    bottom: 0;
+    margin-top: auto; /* Force le footer à rester en bas */
+}
+
+/* Footer du bas de la page */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.messagedefilant {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Flèche de retour */
+.retour-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.retour-link img {
+    width: 50px;
+}
+
+/* Galerie */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-galerie {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-galerie:hover {
+    background-color: black;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Image agrandie */
+.grand {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: 7.5px solid rgba(255, 255, 255, 0.664);
+    border-radius: 10px;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.footer table {
+    text-align: left; /* Alignement du texte à gauche */
+    margin: auto; /* Pour centrer le tableau dans le footer */
+}
+
+.footer td, .footer th {
+    text-align: left; /* Assurez-vous que chaque cellule est alignée à gauche */
+    padding: 8px 10px; /* Espacement intérieur pour plus de lisibilité */
+}
+
+/* Style pour le lien de retour */
+.retour-link {
+    position: fixed; /* Position absolue */
+    top: 100px; /* Distance depuis le haut */
+    left: 20px; /* Distance depuis le côté gauche */
+    text-decoration: none; /* Supprime la décoration des liens */
+    display: inline-block; /* Assure un conteneur compact */
+}
+
+/* Style du rond contenant l'icône */
+.icone-retour {
+    width: 60px; /* Taille du rond */
+    height: 60px;
+    background: linear-gradient(135deg, whitesmoke, gray); /* Dégradé de couleurs modernes */
+    color: white; /* Couleur de la flèche */
+    display: flex; /* Centre le contenu */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Rond parfait */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    font-size: 24px; /* Taille de l'icône */
+    font-weight: bold; /* Rendre la flèche plus visible */
+    transition: all 0.3s ease; /* Animation douce pour hover et focus */
+    border: 2px solid transparent; /* Bordure initialement invisible */
+    cursor: pointer; /* Curseur pointeur */
+    border: 2px solid white;
+}
+
+/* Effets au survol et au focus */
+.icone-retour:hover, .icone-retour:focus {
+    background: linear-gradient(135deg, whitesmoke, rgb(189, 66, 66)); /* Couleurs plus foncées au survol */
+    transform: scale(1.1) rotate(-3deg); /* Effet d'agrandissement et légère rotation */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre */
+    border: 2px solid white; /* Ajout d'une bordure blanche élégante */
+    outline: none; /* Supprime les contours par défaut */
+}
+
+/* Animation subtile lors du clic */
+.icone-retour:active {
+    transform: scale(0.95) rotate(0deg); /* Réduction de taille légère pour un effet de clic */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Ombre réduite */
+}
+
+/* Style de la flèche */
+.fleche {
+    position: relative;
+    top: -1px; /* Ajuste légèrement la position verticale de la flèche */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Animation subtile de la flèche au survol */
+.icone-retour:hover .fleche {
+    transform: translateX(-3px); /* La flèche se déplace légèrement vers la gauche */
+}
+
+/* Boutons des catégories */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
+    gap: 20px; /* Espacement entre les boutons */
+    margin-bottom: 30px;
+}
+
+.btn-galerie {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-galerie:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Responsive - Réduire la taille des boutons sur petits écrans */
+@media (max-width: 768px) {
+    .btn-galerie {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        flex: 1 1 calc(50% - 20px); /* Deux boutons par ligne avec espacement */
+        text-align: center;
+    }
+}
+
+/* Responsive - Empiler les boutons sur très petits écrans */
+@media (max-width: 576px) {
+    .btn-galerie {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        flex: 1 1 100%; /* Un bouton par ligne */
+    }
+}
+
+.footer-copyright {
+    bottom: 10px;
+    right: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.footer table {
+    width: 100%; /* Force le tableau à occuper toute la largeur disponible */
+    table-layout: fixed; /* Force une largeur égale pour toutes les colonnes */
+}
+
+.footer td, .footer th {
+    text-align: left; /* Assurez-vous que chaque cellule est alignée à gauche */
+    padding: 8px 10px; /* Espacement intérieur pour plus de lisibilité */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    overflow: hidden; /* Cache tout excédent de texte */
+    text-overflow: ellipsis; /* Utilise des points de suspension si le texte dépasse */
+}
+
+.footer td a {
+    white-space: nowrap; /* Empêche le texte des liens de se couper */
+}
+
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-sans-regular-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+

@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "Speeday-Regular-FFP";
+    src: url(../image/Fonts/Speeday-Regular-FFP.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Speeday-Bold-FFP";
+    src: url(../image/Fonts/Speeday-Bold-FFP.ttf) format("truetype");
+}
+
+body{
+    background-color:whitesmoke;
+}
+
+th,td {
+    padding: 8px 10px;
+}
+
+.titre_article{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 70;
+    font-style: normal;
+    font-size: 50px;
+}
+
+    a:link{
+        color: blue;
+        text-decoration: none;
+    }
+
+    /* articles*/
+
+    .article-content {
+        background-color: whitesmoke;
+        padding: 20px;
+        margin-top: 15px;
+        padding-top: 70px;
+        text-align: justify;
+    }
+    
+    .article-title {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: whitesmoke; /* Texte blanc pour contraste */
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(90deg, #2c3e50, #4a566e); /* Dégradé sombre évoquant la route et l'intensité */
+    border-radius: 24px;
+    border: 3px solid #000; /* Bordure noire pour accentuer le contraste */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile pour effet de profondeur */
+    text-transform: uppercase; /* Majuscules pour un style plus imposant */
+    letter-spacing: 2px; /* Espacement entre les lettres pour un effet dynamique */
+}
+
+    .article-subtitle {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .article-section-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #222;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    
+    .article-paragraph {
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+    
+strong{
+    color: black;
+}
+
+/* Style pour le message défilant */
+.messagedefilant {
+    position: relative;
+    overflow: hidden; /* Cache le contenu hors écran */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    width: 100%; /* Largeur de la zone visible */
+    height: 50px; /* Ajuste selon la taille de ton texte */
+    background-color: black;
+}
+
+.messagedefilant .contenu {
+    display: inline-block;
+    animation: defilement 10s linear infinite; /* Durée de l'animation */
+}
+
+.messagedefilant span {
+    display: inline-block;
+    font-family: "Racing Sans One", sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px; /* Espacement entre les textes */
+}
+
+/* Animation du défilement */
+@keyframes defilement {
+    from {
+        transform: translateX(0); /* Commence à gauche */
+    }
+    to {
+        transform: translateX(-100%); /* Défile jusqu'à disparaître à gauche */
+    }
+}
+
+/* Styles généraux pour l'intégration de flexbox */
+html, body {
+    height: 100%; /* Prendre toute la hauteur de la fenêtre */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Prend tout l'espace disponible pour les sections entre le header et footer */
+}
+
+/* Footer fixé au bas */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    width: 100%; /* S'assure que le footer occupe toute la largeur de la page */
+    position: relative;
+    bottom: 0 !important;
+    margin-top: auto; /* Force le footer à rester en bas */
+}
+
+/* Footer du bas de la page */
+footer {
+    position: absolute;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+
+.footer table {
+    text-align: left; /* Alignement du texte à gauche */
+    margin: auto; /* Pour centrer le tableau dans le footer */
+}
+
+.footer td, .footer th {
+    text-align: left; /* Assurez-vous que chaque cellule est alignée à gauche */
+    padding: 8px 10px; /* Espacement intérieur pour plus de lisibilité */
+}
+
+.avis-container {
+    display: flex;             /* Disposition en ligne (côte à côte) */
+    gap: 20px;                 /* Espace entre les deux boîtes */
+}
+
+.A2 {
+    background-color: #f9f9f9; /* Fond doux */
+    border: 4px solid #ddd;    /* Bordure légère */
+    border-radius: 5px;        /* Coins légèrement arrondis */
+    padding: 10px;             /* Espacement interne */
+    font-family: Arial, sans-serif; /* Police simple */
+    font-size: 14px;           /* Taille du texte */
+    color: #333;               /* Couleur du texte */
+    max-width: 45%;            /* Largeur maximale des boîtes */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    line-height: 1.5;          /* Espacement entre lignes */
+    text-align: justify;       /* Justifie le texte */
+    text-align-last: left;     /* Dernière ligne alignée à gauche */
+}
+
+.A2 strong {
+    color: #0056b3;            /* Couleur pour les mots importants */
+}
+
+
+.A2 em {
+    font-style: italic;       /* Texte en italique pour les citations */
+    color: #555;              /* Couleur douce pour les nuances */
+}
+
+
+.surligner-texte {
+    font-weight: bold; /* Supprime le gras */
+    color: black !important; /* Rétablit la couleur initiale du texte */
+}
+
+.F1{
+    font-weight: normal !important;
+}
+
+
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-sans-regular-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+  /* Style pour le lien de retour */
+.retour-link {
+    position: fixed; /* Position absolue */
+    top: 100px; /* Distance depuis le haut */
+    left: 20px; /* Distance depuis le côté gauche */
+    text-decoration: none; /* Supprime la décoration des liens */
+    display: inline-block; /* Assure un conteneur compact */
+}
+
+/* Style du rond contenant l'icône */
+.icone-retour {
+    width: 60px; /* Taille du rond */
+    height: 60px;
+    background: linear-gradient(135deg, whitesmoke, gray); /* Dégradé de couleurs modernes */
+    color: white; /* Couleur de la flèche */
+    display: flex; /* Centre le contenu */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Rond parfait */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    font-size: 24px; /* Taille de l'icône */
+    font-weight: bold; /* Rendre la flèche plus visible */
+    transition: all 0.3s ease; /* Animation douce pour hover et focus */
+    border: 2px solid transparent; /* Bordure initialement invisible */
+    cursor: pointer; /* Curseur pointeur */
+    border: 2px solid white;
+}
+
+/* Effets au survol et au focus */
+.icone-retour:hover, .icone-retour:focus {
+    background: linear-gradient(135deg, whitesmoke, #2c3e50); /* Couleurs plus foncées au survol */
+    transform: scale(1.1) rotate(-3deg); /* Effet d'agrandissement et légère rotation */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre */
+    border: 2px solid white; /* Ajout d'une bordure blanche élégante */
+    outline: none; /* Supprime les contours par défaut */
+}
+
+/* Animation subtile lors du clic */
+.icone-retour:active {
+    transform: scale(0.95) rotate(0deg); /* Réduction de taille légère pour un effet de clic */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Ombre réduite */
+}
+
+/* Style de la flèche */
+.fleche {
+    position: relative;
+    top: -1px; /* Ajuste légèrement la position verticale de la flèche */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Animation subtile de la flèche au survol */
+.icone-retour:hover .fleche {
+    transform: translateX(-3px); /* La flèche se déplace légèrement vers la gauche */
+}
+
+/* Style général du lecteur audio */
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0078d7, #00aaff);
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Bouton de lecture */
+.play-btn {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-btn:active {
+    transform: scale(0.9);
+}
+
+/* Icônes de lecture et de pause */
+.icon-play, .icon-pause {
+    font-size: 20px;
+    color: #0078d7;
+    position: absolute;
+}
+
+.icon-pause {
+    display: none;
+}
+
+/* Barre de progression */
+.progress-container {
+    flex: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    -webkit-appearance: none; /* Supprime le style par défaut */
+    appearance: none;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #0078d7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Affichage du temps */
+.time-display {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.footer-copyright {
+    bottom: 10px;
+    right: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 10px; /* Coins un peu plus arrondis */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    border: solid #555 4px; /* Une bordure plus foncée pour plus de contraste */
+}
+
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px; /* Espacement entre les photos */
+    background-color: whitesmoke;
+}
+
+.gallery-item {
+    text-align: center; /* Centre les légendes sous les photos */
+    max-width: 30%; /* Limite la largeur pour correspondre aux images */
+}
+
+.gallery-image {
+    width: 100%; /* Chaque image occupe 30% de la largeur du conteneur */
+    height: auto; /* Préserve le ratio de l'image */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.7s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+figcaption {
+    margin-top: 8px; /* Espacement entre l'image et la légende */
+    font-size: 0.9rem;
+    color: #666; /* Couleur discrète pour la légende */
+    font-family: "PT Sans", sans-serif;
+}
+
+.photo-gallery2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px; /* Espacement entre les photos */
+    background-color: whitesmoke;
+}
+
+.gallery-item2 {
+    text-align: center; /* Centre les légendes sous les photos */
+    max-width: 100%; /* Limite la largeur pour correspondre aux images */
+}
+
+.gallery-image2 {
+    width: 100%; /* Chaque image occupe 30% de la largeur du conteneur */
+    height: auto; /* Préserve le ratio de l'image */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.7s ease;
+}
+
+.gallery-image2:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+.photo-gallery3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px; /* Espacement entre les photos */
+    background-color: whitesmoke;
+}
+
+.gallery-item3 {
+    text-align: center; /* Centre les légendes sous les photos */
+    max-width: 100%; /* Limite la largeur pour correspondre aux images */
+}
+
+.gallery-image3 {
+    width: 100%; /* Chaque image occupe 30% de la largeur du conteneur */
+    height: auto; /* Préserve le ratio de l'image */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.7s ease;
+}
+
+.gallery-image3:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}

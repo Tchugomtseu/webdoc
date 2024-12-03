@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body{
+    background-color:black;
+}
+
+th,td {
+    padding: 8px 10px;
+}
+
+.titre_article{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 70;
+    font-style: normal;
+    font-size: 50px;
+}
+
+/*CSS de la page Index*/
+    .flag{
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 50;
+        font-style: normal;
+        font-size: xx-large;
+    }
+
+    #bodd {
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        min-height: 30em;
+        max-height: 50em;
+    }
+
+    #titre_du_webdoc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            font-family: "Racing Sans One", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 40px;
+            text-align: center;
+    }
+
+    #EnRoute{
+        display: flex;
+        justify-content:space-around;
+        flex-direction: column;
+            font-family: "Racing Sans One", sans-serif;
+            font-weight: 10;
+            font-style: normal;
+            font-size: 20px;
+            text-align: center;
+        border-color: black;
+    }
+
+    #background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    
+/*CSS de la page menu*/
+    #bod {
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        min-height: 30em;
+        max-height: 50em;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    #avant {
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13rem;
+        height: 13rem;
+        filter: opacity(40%);
+        background-color: white;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #av{
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: x-large;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    #avant:hover{
+        border-radius: 75% 25% 25% 75% / 50% 50% 50% 50%;
+        filter: opacity(70%);
+    }
+
+    #choix {
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17rem;
+        height: 17rem;
+        background-color: white;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #ch{
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: xx-large;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    #choix:hover{
+        width: 21rem;
+        height: 21rem;
+    }
+
+    #apres {
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13rem;
+        height: 13rem;
+        filter: opacity(40%);
+        background-color: white;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    #ap{
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: x-large;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    #apres:hover{
+        border-radius: 25% 75% 75% 25% / 50% 50% 50% 50%;
+        filter: opacity(70%);
+    }
+
+/*CSS de la Galerie*/
+    /*CSS Galerie, Image*/
+    .cadre{
+        height: fit-content;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .image{
+        height: 26%;
+        width: 26%;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 1px solid grey;
+        transition-duration: 1s;
+        transition-timing-function: all ease-in-out;
+    }
+    .image:hover{
+        height: 40%;
+        width: 40%;
+    }
+    .image:active{
+        height: 100%;
+        width: 100%;
+    }
+
+    /*CSS Galerie - Bouton*/
+    #btns-glr{
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+    }
+
+    .btnGaleri{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: 2px solid black;
+        background-color: white;
+            font-family: "Racing Sans One", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 30px;
+    }
+
+    .Policelogo{
+        color: #F80302;
+        -webkit-text-stroke-width: 1,5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+
+    a:link{
+        color: aliceblue;
+        text-decoration: none;
+    }
+
+    /* articles*/
+
+    .article-content {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 15px;
+        padding-top: 70px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+    }
+    
+    .article-title {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: whitesmoke; /* Texte blanc pour contraste */
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(90deg, #2c3e50, #4a566e); /* Dégradé sombre */
+    border-radius: 24px;
+    border: 3px solid #000; /* Bordure noire */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    text-transform: uppercase; /* Majuscules*/
+    letter-spacing: 2px;
+}
+
+    .article-subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .article-section-title {
+        font-family: Arial, sans-serif;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #222;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    
+    .article-paragraph {
+        font-family: Arial, sans-serif;
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+    
+strong{
+    color: black;
+}
+
+.imgretour {
+    width: 91px;
+    background-color: transparent; /* Enlever le background gris */
+    border: none;
+}
+/* Style pour la flèche de retour */
+.retour-link {
+    position: absolute; /* Positionne de manière absolue par rapport au parent le plus proche avec position: relative */
+    top: 100px; /* Ajuste la distance du haut (juste en dessous du header) */
+    left: 20px; /* Ajuste la distance du côté gauche */
+}
+
+
+/* Style pour le message défilant */
+.messagedefilant {
+    position: relative;
+    overflow: hidden; /* Cache le contenu hors écran */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    width: 100%; /* Largeur de la zone visible */
+    height: 50px; /* Ajuste selon la taille de ton texte */
+    background-color: black;
+}
+
+.messagedefilant .contenu {
+    display: inline-block;
+    animation: defilement 10s linear infinite; /* Durée de l'animation */
+}
+
+.messagedefilant span {
+    display: inline-block;
+    font-family: "Racing Sans One", sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px; /* Espacement entre les textes */
+}
+
+/* Animation du défilement */
+@keyframes defilement {
+    from {
+        transform: translateX(0); /* Commence à gauche */
+    }
+    to {
+        transform: translateX(-100%); /* Défile jusqu'à disparaître à gauche */
+    }
+}
+
+
+
+/* Styles généraux pour l'intégration de flexbox */
+html, body {
+    height: 100%; /* Prendre toute la hauteur de la fenêtre */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Prend tout l'espace disponible entre le header et footer */
+}
+
+/* Footer fixé au bas */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    width: 100%; /* le footer occupe toute la largeur de la page */
+    position: relative;
+    bottom: 0;
+    margin-top: auto; /* Force le footer à rester en bas */
+}
+
+/* Footer du bas de la page */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espacement entre les photos */
+    background-color: #ffffff;
+}
+
+.gallery-image {
+    width: 30%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.10); /* Zoom léger au survol */
+}
+
+.photo-gallery2 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background-color: #ffffff;
+}
+
+.gallery-image2 {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: transform 0.3s ease;
+}
+
+.gallery-image2:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+}
+
+#mute-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000; /* Toujours visible */
+}
+
+#mute-button:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond plus clair au survol */
+    color: black; /* Texte noir */
+    transform: scale(1.1); /* Effet zoom */
+}
+
+#mute-icon {
+    pointer-events: none; /* Empêche l'interaction avec l'icône */
+}
+
+/* Style pour le bouton Crédits */
+.btn-credits {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.btn-credits:hover {
+    background-color: #333;
+}
+
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

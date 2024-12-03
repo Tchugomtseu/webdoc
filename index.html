@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dans le cadre d'un devoir scolaire, nous avons réalisé ce webdocumantaire sur le Tour de l'Aisne">
+    <meta name="keywords" content="">
+
+    <!-- Page Title -->
+    <title>UNE LONGUE HISTOIRE DE MOTEUR</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/webdoc3.css">
+    <link rel="icon" type="image/png" href="../image/Icons8-Windows-8-Transport-Wheel.512-white.ico" />
+</head>
+<body>
+    <!-- Header Section Start -->
+    <header class="header">
+        <nav class="navbar navbar-expand-md bg-black text-white bg-opacity-80 py-3">
+            <div class="messagedefilant">
+                <div class="contenu">
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                </div>
+                <div class="contenu">
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                </div>
+                <div class="contenu">
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                </div>
+                <div class="contenu">
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                    <span>TOUR DE L'AISNE</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Vidéo de fond -->
+    <video autoplay muted loop id="background-video">
+        <source src="../image/FOND_ACCUEIL.mp4" type="video/mp4">
+    </video>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="fermerPopup()">&times;</span>
+          <h2>Bienvenue sur notre site !</h2>
+          <p>Nous vous conseillons d'appuyer sur votre touche F11 pour plus d'immersion.</p>
+          <button onclick="fermerPopup()">Fermer</button>
+        </div>
+      </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="d-flex flex-column justify-content-center align-items-center">
+        <h1 id="titre-du-webdoc">UNE LONGUE HISTOIRE DE MOTEUR</h1>
+    </div>
+
+    <!-- Button at the Bottom -->
+    <div id="button-container" class="position-absolute" style="bottom: 12%; left: 50%; transform: translateX(-50%);">
+        <a href="menu.html">
+            <input id="en-route-btn" class="bg-white rounded-pill border border-3" type="button" value="En Route">
+        </a>
+    </div>
+    
+</body>
+<script>
+    // Vérifier si c'est la première visite
+window.onload = function() {
+  if (!localStorage.getItem('visited')) {
+    // Si c'est la première visite, afficher le pop-up
+    document.getElementById("popup").style.display = "flex";
+    
+    // Marquer que l'utilisateur a visité le site
+    localStorage.setItem('visited', 'true');
+  }
+};
+
+// Fonction pour fermer le pop-up
+function fermerPopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+</html>
